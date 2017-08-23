@@ -6,5 +6,7 @@ RUN rabbitmq-plugins enable --offline rabbitmq_amqp1_0
 RUN rabbitmq-plugins enable --offline rabbitmq_auth_backend_ldap
 RUN rabbitmq-plugins enable --offline rabbitmq_jms_topic_exchange
 
+ADD rabbitmq.config /etc/rabbitmq/
+
 EXPOSE 1883 4369 5672 15672
 
