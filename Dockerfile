@@ -8,5 +8,7 @@ RUN rabbitmq-plugins enable --offline rabbitmq_jms_topic_exchange
 
 ADD rabbitmq.config /etc/rabbitmq/
 
+RUN chmod 777 /etc/rabbitmq/rabbitmq.config
+
 EXPOSE 1883 4369 5672 15672
 
