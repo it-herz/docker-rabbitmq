@@ -10,7 +10,7 @@ ADD rabbitmq.config /etc/rabbitmq/
 
 RUN chmod 777 /etc/rabbitmq/rabbitmq.config
 
-RUN apk add tzdata && cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime && echo "Europe/Moscow" >  /etc/timezone
+RUN apk update && apk add tzdata && cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime && echo "Europe/Moscow" >  /etc/timezone
 
 ENV TZ Europe/Moscow
 
